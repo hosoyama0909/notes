@@ -4,5 +4,4 @@ title: "野球 - 練習メニュー"
 permalink: /baseball/training/
 ---
 <h1 class="page-title">野球 - 練習メニュー</h1>
-{% assign posts = site.posts | where_exp: "post", "post.categories contains 'baseball' and post.categories contains 'training'" %}
-{% include post-list.html posts=posts %}
+{% include post-list.html posts=site.categories.training %}
