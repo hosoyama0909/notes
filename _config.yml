@@ -3,6 +3,11 @@ description: "野球の投球改善ログと技術調査メモ"
 url: "https://hosoyama0909.github.io"
 baseurl: "/notes"
 markdown: kramdown
+theme: null
 
 exclude:
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
