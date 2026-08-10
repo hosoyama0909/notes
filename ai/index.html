@@ -1,0 +1,8 @@
+---
+layout: default
+title: "AI技術"
+permalink: /ai/
+---
+<h1 class="page-title">AI技術</h1>
+{% assign posts = site.posts | where_exp: "post", "post.categories contains 'ai'" %}
+{% include post-list.html posts=posts %}

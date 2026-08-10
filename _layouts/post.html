@@ -8,7 +8,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
       {% if page.categories.size > 0 %}
       <span class="post-categories">
-        {% for category in page.categories %}<span class="post-category">{{ category }}</span>{% endfor %}
+        {% for category in page.categories %}<span class="post-category">{{ site.data.categories[category] | default: category }}</span>{% endfor %}
       </span>
       {% endif %}
     </p>

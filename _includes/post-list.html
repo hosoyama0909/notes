@@ -1,0 +1,17 @@
+<ul class="post-list">
+  {% for post in include.posts %}
+  <li class="post-list-item">
+    <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="post-list-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      {% if post.categories.size > 0 %}
+      <span class="post-categories">
+        {% for category in post.categories %}<span class="post-category">{{ site.data.categories[category] | default: category }}</span>{% endfor %}
+      </span>
+      {% endif %}
+    </div>
+  </li>
+  {% else %}
+  <li class="post-list-empty">まだ記事がありません。</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,8 @@
+---
+layout: default
+title: "野球 - ステータス"
+permalink: /baseball/status/
+---
+<h1 class="page-title">野球 - ステータス</h1>
+{% assign posts = site.posts | where_exp: "post", "post.categories contains 'baseball' and post.categories contains 'status'" %}
+{% include post-list.html posts=posts %}
