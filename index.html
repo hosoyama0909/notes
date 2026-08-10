@@ -1,18 +1,4 @@
 ---
 layout: default
 ---
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li class="post-list-item">
-    <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <div class="post-list-meta">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-      {% if post.categories.size > 0 %}
-      <span class="post-categories">
-        {% for category in post.categories %}<span class="post-category">{{ category }}</span>{% endfor %}
-      </span>
-      {% endif %}
-    </div>
-  </li>
-  {% endfor %}
-</ul>
+{% include post-list.html posts=site.posts %}

@@ -56,6 +56,22 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
 .site-main {
   max-width: 720px;
   margin: 0 auto;
@@ -92,6 +108,16 @@ a:hover {
   margin-top: 4px;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.post-list-empty {
+  padding: 16px 0;
+  color: var(--muted);
+}
+
+.page-title {
+  margin: 0 0 20px;
+  font-size: 1.4rem;
 }
 
 .post-header {
