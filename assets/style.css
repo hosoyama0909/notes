@@ -1,0 +1,130 @@
+:root {
+  --bg: #FAFAF7;
+  --fg: #202124;
+  --muted: #6b6f76;
+  --accent: #2B5F72;
+  --border: #e4e4e0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161A;
+    --fg: #ECECE6;
+    --muted: #9a9fa6;
+    --accent: #5FA8C4;
+    --border: #2a2d33;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.site-description {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.site-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 20px 32px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-list-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.post-list-meta {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.post-header {
+  margin-bottom: 24px;
+}
+
+.post-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.post-category {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.post-content img {
+  max-width: 100%;
+}
+
+.post-content pre {
+  overflow-x: auto;
+  padding: 12px;
+  background: var(--border);
+  border-radius: 6px;
+}
